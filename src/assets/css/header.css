@@ -1,0 +1,70 @@
+.navBar.activeNav {
+  background: transparent;
+  box-shadow: none;
+}
+.active {
+  color: #ff136f !important;
+  font-weight: bold !important;
+}
+.register {
+  display: inline-block !important;
+  background: linear-gradient(
+    335.64deg,
+    #ff589b -19.22%,
+    #ff136f 118.87%
+  ) !important;
+  padding: 8px 25px !important;
+  color: #fff !important;
+  border-radius: 52px !important;
+}
+
+.login {
+  display: inline-block !important;
+  background: transparent !important;
+  padding: 7px 24px !important;
+  color: #fff !important;
+  border-radius: 52px !important;
+  border: 1px solid white;
+}
+.email {
+  font-size: 14px;
+}
+.navBar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: #111111 !important;
+  box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.051);
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+}
+a.text-white.nav-link {
+  margin: 0 5px;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+a.text-white.nav-link:hover {
+  color: #ff136f !important;
+}
+@media screen and (max-width: 991px) {
+  .navBar {
+    position: static !important;
+  }
+  .small-device {
+    background: url("./../../assets/images/header-bg.png") !important;
+  }
+  a.text-white.nav-link {
+    display: block !important;
+    border-bottom: 1px solid #ddd !important;
+    width: 100%;
+    text-align: center;
+  }
+  a.text-white.nav-link:last-child {
+    border-bottom: none !important;
+    margin-bottom: 10px;
+  }
+}
+.ms-auto.align-items-center.navbar-nav .register:hover {
+  color: Black !important;
+}

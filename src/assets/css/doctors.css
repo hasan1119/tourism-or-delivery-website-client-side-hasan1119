@@ -1,0 +1,15 @@
+.doctor-title {
+  font-size: 39px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem !important;
+  color: rgba(0, 0, 0, 0.9);
+}
+p.text-center.doctor-desc {
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #999 !important;
+}

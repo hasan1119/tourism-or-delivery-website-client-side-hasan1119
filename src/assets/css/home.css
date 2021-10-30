@@ -1,0 +1,77 @@
+.hero-area {
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(45, 45, 45, 0.9) 0%,
+      rgba(45, 45, 45, 0.6) 30%,
+      rgba(45, 45, 45, 0.2) 100%
+    ),
+    url("http://www.nicdarkthemes.com/themes/hotel/wp/demo/intro/img/parallax/splash-header-2.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 1100px) {
+  .hero-area {
+    background-size: auto 100%;
+  }
+}
+.hero-area .title {
+  font-size: 64px;
+  line-height: 1;
+  width: 430px;
+  color: white;
+  font-weight: 700;
+  margin: 25px 0;
+}
+.hero-area .greeting {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #317fc4;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.hero-area .desc {
+  margin-bottom: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.8);
+}
+.hero-area .appointment {
+  padding: 12px 20px;
+  background: linear-gradient(
+    335.64deg,
+    #ff589b -19.22%,
+    #ff136f 118.87%
+  ) !important;
+  box-shadow: 0 24px 36px -11px rgba(197, 197, 197, 0.09);
+  color: #fff !important;
+}
+@media screen and (max-width: 500px) {
+  .container-column {
+    text-align: center !important;
+  }
+  .blank {
+    display: none;
+  }
+  .hero-area .title {
+    font-size: 35px !important;
+    width: 100%;
+  }
+  .hero-area .appointment {
+    font-size: 14px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+.priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#00000049, #00000049),
+    url("https://preview.colorlib.com/theme/mediplus/images/xbg_2.jpg.pagespeed.ic.pQrXJywxF9.webp");
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
