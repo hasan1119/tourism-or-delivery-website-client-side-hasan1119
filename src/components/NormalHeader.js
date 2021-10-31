@@ -13,7 +13,7 @@ const Header = () => {
       <Navbar variant="dark" className="navBar" expand="lg">
         <Container>
           <Navbar.Brand as={NavLink} className="text-white" to="/home">
-            <span className="fw-bold fs-4">HealthCare</span>
+            <span className="fw-bold fs-4">HOTEL BOOKING</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

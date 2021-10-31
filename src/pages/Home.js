@@ -7,12 +7,12 @@ import Service from "../components/Service.js";
 import BG from "../assets/images/home-bg.jpg";
 import "./../assets/css/home.css";
 import useAuth from "../hooks/useAuth.js";
+import Contact from "./Contact.js";
 
 const Home = () => {
   const { blogs } = useAuth();
   return (
     <div>
-      {/* Hero area */}
       <Slide left>
         <div className="vh-100 d-flex align-items-center hero-area">
           <Container>
@@ -63,22 +63,7 @@ const Home = () => {
           <Service />
         </Container>
       </div>
-      <div className="priority">
-        <Container className="d-flex justify-content-center align-items-center">
-          <div className="text-center">
-            <h1 className="fs-1 text-primary fw-bold">
-              Your Health is Our Priority
-            </h1>
-            <p className="text-white">
-              We can manage your dream building A small river named Duden flows
-              by their place
-            </p>
-            <button className="btn btn-primary py-2 px-4 appointment rounded-pill">
-              Make a appointment
-            </button>
-          </div>
-        </Container>
-      </div>
+
       <div className="blogs">
         <Container className="py-5">
           <h1 className="text-center fs-1">Our Blogs</h1>
@@ -125,6 +110,7 @@ const Home = () => {
           </div>
         </Container>
       </div>
+      <Contact></Contact>
     </div>
   );
 };

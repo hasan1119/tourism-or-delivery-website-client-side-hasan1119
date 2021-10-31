@@ -28,7 +28,7 @@ const AddService = () => {
     <>
       <Header></Header>
       <div
-        className="d-flex justify-content-center align-items-center"
+        className="d-flex bg-dark text-white justify-content-center align-items-center"
         style={{ minHeight: "100vh" }}
       >
         <div style={{ maxWidth: "700px" }} className="mt-5 w-100 mx-auto">
@@ -82,7 +82,7 @@ const AddService = () => {
 
               <input
                 required
-                className="btn mb-3 btn-primary border-0 rounded-0 w-100 d-block"
+                className="btn rounded mb-3 btn-primary border-0 rounded-0 w-100 d-block"
                 type="submit"
                 value="Add Now"
               />

@@ -22,16 +22,20 @@ thead {
 
 tbody td,
 thead th {
+  color: white !important;
   text-align: center;
-  min-width: 170px;
-  border: 1px solid rgba(121, 121, 121, 0.336);
+  border: 1px solid #7979792d;
 }
 
 td {
+  min-width: 200px;
   vertical-align: middle;
-  border: 1px solid rgba(102, 102, 102, 0.288);
+  border: 1px solid #7979792d;
 }
-
+tr {
+  border: 1px solid #7979792d;
+  transition: 0.3s;
+}
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   position: absolute;
   right: 0;
@@ -42,7 +46,9 @@ td {
   max-width: 500px;
   padding: 0 20px;
 }
-
+tbody tr:hover {
+  background-color: rgb(92, 92, 92) !important;
+}
 .custom-btn {
   background: rgb(104, 77, 250);
   background: linear-gradient(

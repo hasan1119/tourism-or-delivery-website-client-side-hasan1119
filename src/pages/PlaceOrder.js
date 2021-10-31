@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import NormalHeader from "../components/NormalHeader.js";
 import { useHistory, useParams } from "react-router";
 import Footer from "../components/Footer.js";
-import { Col, Container, Row } from "react-bootstrap";
-import Zoom from "react-reveal/Zoom";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth.js";
@@ -11,7 +9,7 @@ import useAuth from "../hooks/useAuth.js";
 const ServiceDetails = () => {
   const { allAuthInfo } = useAuth();
   const { user } = allAuthInfo;
-  const { displayName, email } = user;
+  const { displayName, email, photoURL } = user;
   const [service, setService] = useState({});
   const history = useHistory();
   const { id } = useParams();
@@ -25,10 +23,10 @@ const ServiceDetails = () => {
   }, [id]);
 
   const { img, title, ratings, totalReview, desc, price } = service;
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    const { name, email, address, phone, photoURL } = data;
+    const { name, email, address, phone, profile } = data;
     const ordered = {
       title,
       desc,
@@ -40,7 +38,7 @@ const ServiceDetails = () => {
       email,
       address,
       phone,
-      photoURL,
+      profile,
       status: "Pending",
     };
 
@@ -152,12 +150,13 @@ const ServiceDetails = () => {
                       </label>
 
                       <label className="d-block mb-4" htmlFor="photo">
-                        <h6>Your photoURL</h6>
+                        <h6>Your profile Photo url</h6>
                         <input
+                          defaultValue={photoURL}
                           className="form-control w-100 d-block"
                           id="photo"
-                          placeholder="Your PhotoURL"
-                          {...register("photoURL")}
+                          placeholder="Your profile"
+                          {...register("profile")}
                         />
                       </label>
 

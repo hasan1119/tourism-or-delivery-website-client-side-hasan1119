@@ -1,18 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card, Spinner } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 const Service = () => {
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get("https://afternoon-citadel-33920.herokuapp.com/services")
       .then((res) => {
         setServices(res.data);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center my-5 py-5">
+        <Spinner variant="success" animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
+  }
 
   return (
     <Row>
@@ -24,7 +36,7 @@ const Service = () => {
 };
 
 const SingleService = ({ service }) => {
-  const { title, _id, img, desc, price, rating, totalReviw } = service;
+  const { title, _id, img, desc, price } = service;
   return (
     <Col className="my-3" md={6} lg={4}>
       <Zoom>

@@ -13,7 +13,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     axios
-      .get("https://afternoon-citadel-33920.herokuapp.com/orders")
+      .get(`https://afternoon-citadel-33920.herokuapp.com/myorders/${email}`)
       .then((res) => {
         setMyOrders(res.data);
       });
@@ -38,11 +38,17 @@ const MyOrders = () => {
 
   return (
     <>
-      <div style={{ minHeight: "100vh" }}>
+      <div
+        className="bg-dark"
+        style={{
+          minHeight: "100vh",
+          color: "white !important",
+        }}
+      >
         <Header></Header>
         <div className="mt-5 pt-5">
-          <h1 className="text-center mb-3">My Orders</h1>
-          <div style={{ width: "100vw", overflow: "scroll hidden" }}>
+          <h1 className="text-center text-white mb-3">My Orders</h1>
+          <div style={{ width: "100vw", overflow: "auto" }}>
             <table className="table table-hover">
               <thead>
                 <tr>
